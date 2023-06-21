@@ -4,7 +4,7 @@
   "info": {
     "singularName": "service",
     "pluralName": "services",
-    "displayName": "service",
+    "displayName": "Service",
     "description": ""
   },
   "options": {
@@ -12,9 +12,18 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
-      "type": "text",
+    "service_name": {
+      "type": "string",
       "required": true
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client",
+      "inversedBy": "services"
     }
   }
 }

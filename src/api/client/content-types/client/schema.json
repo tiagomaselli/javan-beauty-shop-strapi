@@ -4,7 +4,7 @@
   "info": {
     "singularName": "client",
     "pluralName": "clients",
-    "displayName": "client",
+    "displayName": "Client",
     "description": ""
   },
   "options": {
@@ -26,10 +26,10 @@
       "type": "email",
       "minLength": 7
     },
-    "done_services": {
+    "services": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::done-service.done-service",
+      "target": "api::service.service",
       "mappedBy": "client"
     }
   }
